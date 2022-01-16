@@ -1,9 +1,9 @@
 # Minor tweaks
 - Display SSID and IP after connection established
 - Reduce font size to display more text:
-   TMP = Temp., HUM = Humidity
-- Tweak text:
-   PM2 = PM², CO2 = CO², C = °C, Waiting to connect.. = Waiting for WiFi
+  PM2 -> PM2.5, TMP -> Temp., HUM -> Humidity
+- Other text tweaks:
+  C = °C, Waiting to connect.. = Waiting for WiFi
 
 # AirGradient - Prometheus WiFi Sketch
 
