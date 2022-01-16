@@ -208,14 +208,14 @@ void updateScreen(long now) {
       case 0:
         if (hasPM) {
           int stat = ag.getPM2_Raw();
-          showTextRectangle("PM²",String(stat),true);
+          showTextRectangle("PM2.5",String(stat),true);
         }
 //        counter++;  // Uncomment to remove display update delay if you do not have CO2 sensor
         break;
       case 1:
         if (hasCO2) {
           int stat = ag.getCO2_Raw();
-          showTextRectangle("CO²", String(stat), true);
+          showTextRectangle("CO2", String(stat), true);
         }
         break;
       case 2:
