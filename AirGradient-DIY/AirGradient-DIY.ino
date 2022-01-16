@@ -83,9 +83,18 @@ void setup() {
   Serial.println("");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-    showTextRectangle("Trying to", "connect...", true);
+    showTextRectangle("Waiting", "for WiFi", true);
     Serial.print(".");
   }
+  
+  // Display WiFi SSID and IP
+  display.clear();
+  display.setTextAlignment(TEXT_ALIGN_LEFT);
+  display.setFont(ArialMT_Plain_10);
+  display.drawString(32, 16, ssid);
+  display.drawString(32, 36, WiFi.localIP().toString());
+  display.display();
+  delay(5000);
 
   Serial.println("");
   Serial.print("Connected to ");
@@ -199,25 +208,26 @@ void updateScreen(long now) {
       case 0:
         if (hasPM) {
           int stat = ag.getPM2_Raw();
-          showTextRectangle("PM2",String(stat),false);
+          showTextRectangle("PM²",String(stat),true);
         }
+//        counter++;  // Uncomment to remove display update delay if you do not have CO2 sensor
         break;
       case 1:
         if (hasCO2) {
           int stat = ag.getCO2_Raw();
-          showTextRectangle("CO2", String(stat), false);
+          showTextRectangle("CO²", String(stat), true);
         }
         break;
       case 2:
         if (hasSHT) {
           TMP_RH stat = ag.periodicFetchData();
-          showTextRectangle("TMP", String(stat.t, 1) + "C", false);
+          showTextRectangle("Temp.", String(stat.t, 1) + "°C", true);
         }
         break;
       case 3:
         if (hasSHT) {
           TMP_RH stat = ag.periodicFetchData();
-          showTextRectangle("HUM", String(stat.rh) + "%", false);
+          showTextRectangle("Humidity", String(stat.rh) + "%", true);
         }
         break;
     }
