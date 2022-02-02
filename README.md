@@ -1,4 +1,4 @@
-# Fork Changes: Display Tweaks
+# Display Tweaks
 - Display SSID and IP after connection established
 - Reduced font size and nicer display:
                    PM2 -> PM2.5
@@ -8,7 +8,8 @@
   Waiting to connect.. -> Waiting for WiFi
 
 
-## Details from the original repository are below:
+## The original repository README is below
+
 
 # AirGradient - Prometheus WiFi Sketch
 
