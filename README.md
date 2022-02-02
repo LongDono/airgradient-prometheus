@@ -1,15 +1,13 @@
-# Display Tweaks
+# My Fork: Display Tweaks
 - Display SSID and IP after connection established
 - Reduced font size and nicer display:
-                   PM2 -> PM2.5
+```                   PM2 -> PM2.5
                    TMP -> Temp.
                    HUM -> Humidity
                      C -> °C
   Waiting to connect.. -> Waiting for WiFi
-
-
-## The original repository README is below
-
+```
+_The original repository README continues below_
 
 # AirGradient - Prometheus WiFi Sketch
 
