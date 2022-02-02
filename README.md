@@ -1,13 +1,17 @@
-# Minor tweaks
+# Fork Changes: Display Tweaks
 - Display SSID and IP after connection established
-- Reduce font size to display more text:
-  PM2 -> PM2.5, TMP -> Temp., HUM -> Humidity
-- Other text tweaks:
-  C = °C, Waiting to connect.. = Waiting for WiFi
+- Reduced font size and nicer display:
+                   PM2 -> PM2.5
+                   TMP -> Temp.
+                   HUM -> Humidity
+                     C -> °C
+  Waiting to connect.. -> Waiting for WiFi
+
+
+## Details from the original repository are below:
 
 # AirGradient - Prometheus WiFi Sketch
 
-[![CI](https://github.com/geerlingguy/airgradient-prometheus/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/geerlingguy/airgradient-prometheus/actions/workflows/ci.yml)
 
 AirGradient has a [DIY air sensor](https://www.airgradient.com/diy/). I built one (actually, more than one). I want to integrate sensor data into my in-home Prometheus instance and graph the data in Grafana.
 
